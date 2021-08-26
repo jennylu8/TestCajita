@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> Cajita de pagos de Jenny</title>
+   
+        <script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>
+
+</head>
+<body>      <center>
+            <p>  <h1> Este es la cajita de pago V2 </h1> </p> 
+            ("Form" tomado de la documentación de Cajita - Sección: Acepta pago con tarjeta)
+        
+                            
+            <form id="my-form" action="/confirm" method="post">  
+                <input type="hidden" name="cart_id" value="123">
+            </form>
+            </center>      
+            
+            <script type="text/javascript">
+                var kushki = new KushkiCheckout({
+                    form: "my-form",
+                    merchant_id: "554d57e3fade476bb113ead21d947cdd", //Credencial pública
+                    amount: "14.99",
+                    currency: "PEN",
+                    payment_methods:["credit-card"], 
+                    inTestEnvironment: true, 
+                });
+            </script>
+
+
+           
+             
+            
+</body>
+</html>
